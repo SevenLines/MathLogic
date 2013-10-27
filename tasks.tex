@@ -1,0 +1,367 @@
+\documentclass[a4paper,10pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2C]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{fontenc}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{mathtext}
+\usepackage{verbatim}
+%\usepackage{indentfirst}
+
+\righthyphenmin=2
+\oddsidemargin=0pt
+\textwidth=140mm
+
+\date{\today}
+\author{Каташевцев}
+\title{Математическая логика}
+
+
+
+\newcounter{task}[chapter]
+\newcommand{\z}{\par\addtocounter{task}{1}%
+ \noindent\textbf{Задача \arabic{chapter}.\arabic{task}. }}
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+ \large Иркутский Государственный Университет
+ \\[4.5cm]
+ \huge Сборник задач для практических занятий 
+ \\[0.6cm]
+ \large по курсу <<Математическая Логика>>
+ \\[3.6cm]
+\end{center}
+ 
+
+\begin{flushright}
+\begin{minipage}{0.5\textwidth}
+ \begin{flushright}
+  \emph{Автор:} Каташевцев М. Д.\\
+ \end{flushright}
+ 
+ \end{minipage}
+\end{flushright}
+\begin{center}
+ \vfill 
+ 
+ {\large \LaTeX}\\[0.4cm]
+ {\large \the\year г.}
+ \thispagestyle{empty}
+\end{center}
+
+\end{titlepage}
+
+\tableofcontents
+
+\chapter{Формулы исчисления высказываний}
+
+\begin{multicols}{2}
+
+\z Доказать что следующие формы эквивалентны:
+\begin{enumerate}
+ \item $A \vee B$ и $\neg(\bar{A} \wedge \bar{B})$
+ \item $A \wedge B$ и $\neg(\bar{A} \vee \bar{B})$
+ \item $(A \wedge B) \vee C $ и $ (A \vee C) \wedge (B \vee C) $
+ \item $(A \vee B) \wedge C $ и $ (A \wedge C) \vee (B \wedge C) $
+\end{enumerate}
+
+ 
+  \z Расставить скобки и построить таблицу истинности для форм:
+ \begin{enumerate}
+  \item $\neg A \to A \wedge B$
+  \item $ A \vee \neg B \to C \equiv A $
+  \item $A \vee B \wedge C \to D$
+ \end{enumerate}
+
+\z Определить, является ли каждая из следующих форм тавтологией, противоречием 
+или
+ни тем и ни другим:
+ \begin{enumerate}
+  \item  $A\equiv(A \vee A)$
+  \item $ (A\to B) \to ((B \to C) \to (A \to C))$
+  \item $((A \to B) \wedge B) \to A $
+  
+  \item $A \wedge (\neg (A \vee B ))$
+  \item $(A \to B) \equiv ( \neg A \vee B)$
+  \item $(A \to B) \equiv \neg (A \wedge \neg B)$
+ \end{enumerate}
+ 
+\z Выразить через
+ \begin{enumerate}
+  \item $\vee, \neg$ связки $\wedge, \to$
+  \item $\wedge, \neg$ связки $\vee, \to$
+  \item $\to, \neg$ связки $\wedge, \vee$
+  \item $\downarrow$ связки $\wedge, \to, \neg$
+  \item $|$ связки $\wedge, \to, \neg$
+ \end{enumerate}
+ \z Построить КНФ, ДНФ, СКНФ и СДНФ:
+ \begin{enumerate}
+  \item $ X \to ( Y \to Z )$
+  \item $\neg(X \vee Z) \wedge (X \to Y)$
+  \item $( X \to  Y) \to Z $
+  \item $(X \equiv Y) \wedge \neg (Z \to T)$
+ \end{enumerate}
+
+
+
+\end{multicols}
+ 
+\chapter{Теория множеств. Отношения}
+\section{Теория множеств}
+
+\begin{multicols}{2}
+
+ \z Доказать эквивалентность:
+ \begin{enumerate}
+  \item $\emptyset \cap X$ и $\emptyset$
+  \item $ (X \cup Y) \cap Z$ и $ (X \cap Z) \cup (Y \cap Z) $
+  \item $ \neg(X \cup Y)$ и $\bar{X} \cap \bar{Y} $
+  \item $X \cap ( Y \cup \bar{Y})$ и $X$
+  \item $X \cap ( Y \setminus X)$ и $\emptyset$
+  \item  $ X \setminus Y $ и $X \setminus (X \cap Y) $
+  \item $ (X \setminus Y) \setminus Z $ и $ (X \setminus Z) \setminus (Y 
+\setminus Z)$
+ \item $(X \cup Y) \setminus Z$ и $(X \setminus Z) \cup (Y \setminus Z)$
+ \item $A \cap  (B \setminus C)$ и $ (A \cap B) \setminus (A \cap C)$ и $(A 
+\cap B) \setminus C$
+ \end{enumerate}
+
+\section{Общие понятия об отношениях}
+\z Построить декартово произведение:
+ \begin{enumerate}
+  \item $X \times X $, где $X = \{1, 2, 3, 4 \}$
+  \item $X \times Y $, где $X = \{1, 2, 3, 4 \}$, а $Y = \{5,6,7\}$
+  \item $X \times Y $, где $X = \{b, a, c \}$, а $Y = \{x,y,z\}$
+ \end{enumerate}
+ 
+\z Построить бинарные отношения <<$>$>>, <<$<$>> и <<$=$>> заданные на:
+\begin{enumerate}
+ \item на множестве $X = \{5, 6, 7, 8 \}$
+ \item на декартовом произведении $X \times Y $, где $X = \{1, 2, 3, 4 \}$, а 
+$Y = \{5,6,7\}$
+ \item на декартовом произведении $X \times Y $, где $X = \{b, a, c \}$, а $Y = 
+\{c,y,z\}$
+\end{enumerate}
+
+\z Построить тернарное отношение $\beta$ заданное на множества $S = 
+\{1,2,3,4\}$, истинное для $x,y,z \in S$ тогда и только тогда когда $x<y<z$.
+
+\z Построить унарное отношение $\alpha$ (свойство) заданное на множестве $S~=~
+\{ \textrm{А ... Я} \}$ истинное для $x \in S$ тогда и только тогда когда $x$ 
+-- гласная.
+
+\z Построить тернарное отношение $w$ заданное на множестве $S~=~
+\{ \textrm{А ... Я} \}$ истинное для $a,b,c \in S$ тогда и только тогда когда 
+$abc$ -- некоторое слово из трех букв
+
+\begin{comment}
+\z Пусть $\alpha$, $\beta$ -- отношения. Доказать истинность следующих 
+утверждений;
+\begin{enumerate}
+ \item $a(\alpha \cup \beta)b \Leftrightarrow a\alpha b \vee a\beta b$
+ \item $a(\alpha \wedge \beta)b \Leftrightarrow a\alpha b \wedge a\beta b$
+ \item $a \alpha' b \Leftrightarrow \neg a \alpha b$
+\end{enumerate}
+\end{comment}
+
+\z Построить следующие отношения
+\begin{enumerate}
+ \item $> \cup =$
+ \item $(> \cup <) \setminus =$
+ \item $\geq \cap  \leq$
+\end{enumerate}
+
+\z Построить произведение отношений заданных на множестве $X=\{1,2,3,4\}$:
+\begin{enumerate}
+ \item $<$ и $=$
+ \item $<$ и $<$
+ \item $>$ и $<$
+ \item $<$ и $>$
+ 
+ \item $>$ и $>$
+ \item $=$ и $<$
+\end{enumerate}
+
+\z Доказать следующие утверждения:
+\begin{enumerate}
+ \item $(\alpha \cup \beta)^{-1} = \alpha^{-1} \cup \beta^{-1}$
+ \item $(\alpha \cap \beta)^{-1} = \alpha^{-1} \cap \beta^{-1}$
+ \item $(\alpha\beta)^{-1} = \beta^{-1}\alpha^{-1}$
+ \item $(\alpha^{-1})' = (a')^{-1}$
+
+ \item $\alpha(\beta \gamma) = (\alpha\beta) \gamma$
+
+ \item $\alpha(\beta \cup \gamma) = \alpha\beta \cup \alpha\gamma$
+ \item $(\beta \cup \gamma)\alpha = \beta\alpha \cup \gamma\alpha$
+\end{enumerate}
+
+\z Построить отношение $<^{100}$ на множестве $A = \{1,2, .. 103\}$
+
+\end{multicols}
+
+\section{Отношения эквивалентности}
+
+\begin{multicols}{2}
+
+\z Доказать что следующие отношения являются отношениями эквивалентности:
+\begin{enumerate}
+ \item Отношение равенства по модулю
+ \item Отношения сравнимости по модулю $n$
+\end{enumerate}
+
+\z Показать что следующее отношения являются отношениями 
+эквивалентности и построить матрицы инцидентности
+\begin{enumerate}
+ \item Отношение равенства по модулю на множестве $\{-2, -1, 0, 1, 2\}$
+ \item Отношение равенства тангенсов двух углов на множестве 
+ $\{ 0, \frac{\pi}{2}, \pi,\frac{3\pi}{2}\}$
+ \item Отношения сравнимости по модулю 3 на множестве $\{1,10, 14, 23, 24 \}$
+\end{enumerate}
+
+\z Пусть $\alpha$ и $\beta$ эквивалентности доказать следующие утверждения:
+\begin{enumerate}
+ \item $\alpha \cap \beta$ -- эквивалентность
+ \item $\alpha \beta$ -- эквивалентность $\leftrightarrow \alpha$ и $\beta$ перестановочны  
+\end{enumerate}
+
+\z Построить фактор множество множества $A$ по отношению $\alpha$
+\begin{enumerate}
+ \item $A = \{1,2,3,4\}$, $\alpha \sim =$
+ \item $A = \{1,2,3,4,5\}$, $\alpha \sim mod2$
+ \item $A = \{4,7,23,56,31,45\}$, $\alpha \sim mod3$
+ \item $A = \{0, \frac{\pi}{2},\frac{3\pi}{2},\pi,\frac{5\pi}{2}\}$, $a\alpha b \leftrightarrow sin(a) = sin(b)$ 
+\end{enumerate}
+
+\end{multicols}
+
+\chapter{Формулы исчисления предикатов}
+
+\begin{multicols}{2}
+
+\z Выразить через логические операции
+\begin{enumerate}
+ \item $\forall xP(x)$
+ \item $\exists xP(x)$
+\end{enumerate}
+
+\z Докажите эквивалентность
+\begin{enumerate}
+ \item $\neg \exists xP(x)$ и $\forall x\neg P(x)$
+ \item $\neg \forall xP(x)$ и $\exists  x\neg P(x)$
+\end{enumerate}
+
+\z Используя формулы исчисления предикатов построить следующие высказывания
+\begin{enumerate}
+ \item Все люди умеют летать
+ \item Любой житель Европы свободно владеет английским, арабским или китайским (2-мя способами) 
+ \item Все планеты солнечной системы вращаются вокруг солнца (планеты, космические объекты)
+ \item Некоторые люди не умеют летать
+ \item У каждой планеты есть своя звезда вокруг которой она кружится  (планеты, космические объекты)
+ \item Некоторые люди в силу определенных обстоятельств не любят летать
+ \item Только на планетах с атмосферой можно обнаружить воду
+\end{enumerate}
+
+\z Расшифровать следующие высказывания
+\begin{enumerate}
+ \item $\forall a_1 \forall a_2 (\forall b(b \in a_1 \leftrightarrow b \in a_2) \to a_1=a_2)$
+ \item $\exists a \forall b(b \notin a)$
+ \item $\exists a: (\emptyset \in a \wedge \forall b(b \in a \leftrightarrow b \cup \{b\} \in a)$
+ \item $\forall a_1 \forall a_2 \exists c\forall b(b \in a \leftrightarrow (b=a_1 \vee b=a_2))$
+\end{enumerate}
+
+\z Привести к предваренное нормальной форме, если $A$ не содержит свободных
+вхождений переменной $x$
+\begin{enumerate}
+ \item $A \wedge \forall xB(x)$
+ \item $A \vee \forall xB(x)$ 
+ \item $A \wedge \exists xB(x)$
+ \item $A \vee \exists xB(x)$ 
+ \item $\forall xB(x) \wedge A$
+ \item $\forall xB(x) \vee A $  
+ \item $\exists xB(x) \wedge A$
+ \item $A \to \exists xB(x)$
+ \item $A \to \forall xB(x)$   
+ \item $\exists xB(x) \to A$  
+ \item $\forall xB(x) \to A$
+\end{enumerate}
+
+\end{multicols}
+
+\pagebreak
+\z Привести к предваренное нормальной форме
+\begin{enumerate}
+ \item $\forall xP(x) \to P(y)$
+ \item $\forall xP(x) \to P(x,y)$
+ \item $\forall xP(x) \to \exists y \exists x P(x,y)$
+ \item $\forall x(P(x) \to Q(x)) \to (\exists xP(x) \to \exists yQ(y)$
+ \item $\forall x(P(x) \to \forall xQ(x)$
+ \item $\forall xQ(x,y) \vee (\exists x Q(x,x) \to \forall z(R(t,z) \to \exists xQ(x,x) )$
+ \item $\forall yQ(y,z) \to \exists xR(x,t,z)$
+ \item $\forall yQ(x,y) \to R(x,x)$
+ \item $(P(y) \wedge Q(x)) \to \neg \forall yR(y,z)$
+ \item $\forall x (A(x) \to  \forall y(A(x,y)\to \neg\forall zA(y,z)))$
+ \item $A(x,y) \to \exists y[A(y) \to (\exists xA(x) \to A(y))]$
+\end{enumerate}
+
+
+
+\z Используя формулы исчисления предикатов построить следующие высказывания
+\begin{enumerate}
+ \item Существует ровно один элемент x такой что P(x)
+ \item Существует не более одного элемента x такого что P(x) 
+ \item Существует не более двух элементов x таких что P(x) 
+ \item Между любыми двумя различными точками на прямой лежит по меньшей мере одна, с ними не совпадающая
+ \item Через две различные точки на плоскости проходит единственная прямая
+ \item Существование четных число
+ \item Существование нечетных число 
+ \item Существование простых числа
+ \item Существование периодических функций
+\end{enumerate}
+
+\begin{multicols}{1}
+
+\z Докажите что следующие формулы являются тавтологиями логики предикатов
+\begin{enumerate}
+ \item $\forall xP(x) \to P(y)$
+ \item $P(y) \to \exists x P(x)$
+ \item $\forall xP(x) \to \exists xP(x)$
+ \item $\exists yP(y) \to P(x)$
+ \item $\forall x\forall yP(x,y) \to \forall xP(x,x)$
+ \item $\exists xP(x,x) \to \exists x\exists y P(x,y)$
+ \item $\forall x\forall yQ(x,y) \leftrightarrow \forall y\forall xQ(x,y) $
+ \item $\exists x\exists yQ(x,y) \leftrightarrow \exists y\exists xQ(x,y) $
+ \item $\forall x\exists z(F(x,y) \vee \neg F(z,y))$
+ \item $\forall x\exists y\forall z((P(x) \wedge P(y)) \to Q(z))$ 
+ \item $\exists y\forall xP(x,y) \to \forall\exists P(x,y)$
+\end{enumerate}
+
+\end{multicols}
+
+\chapter{Вывод в формулах исчисления высказываний}
+
+\begin{multicols}{2}
+
+\z Построить вывод 
+\begin{enumerate}
+ \item $A \to (B \to A)$
+ \item $C \to (D \to C)$
+ \item $B \to ((A \to B) \to B)$ 
+ \item $B \to (A \to (B \to A))$
+ \item $B \to (B \to (A \to B))$
+ \item $(A \to B) \to (A \to A)$
+ \item $(A \to A) \to (A \to A)$
+ \item $(\neg A \to A) \to A$
+ \item $A \to (B \to ((C \to A) \to B))$
+ \item $A \to A$
+ \item $(A \to A) \to (B \to (A \to A))$ 
+ \item $A \to (B \to (C \to A))$
+\end{enumerate}
+
+\end{multicols}
+
+\end{document}
