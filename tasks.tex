@@ -8,7 +8,11 @@
 \usepackage{multicol}
 \usepackage{mathtext}
 \usepackage{verbatim}
-%\usepackage{indentfirst}
+\usepackage[usenames,dvipsnames]{color}
+
+\definecolor{light-gray}{gray}{0.95}
+
+\newcommand{\hlight}[1]{\colorbox{light-gray}{#1}}
 
 \righthyphenmin=2
 \oddsidemargin=0pt
@@ -17,8 +21,6 @@
 \date{\today}
 \author{Каташевцев}
 \title{Математическая логика}
-
-
 
 \newcounter{task}[chapter]
 \newcommand{\z}{\par\addtocounter{task}{1}%
@@ -342,24 +344,48 @@ $abc$ -- некоторое слово из трех букв
 
 \end{multicols}
 
-\chapter{Вывод в формулах исчисления высказываний}
+\chapter{Вывод в ФИВ}
 
 \begin{multicols}{2}
 
 \z Построить вывод 
 \begin{enumerate}
- \item $A \to (B \to A)$
- \item $C \to (D \to C)$
- \item $B \to ((A \to B) \to B)$ 
- \item $B \to (A \to (B \to A))$
- \item $B \to (B \to (A \to B))$
- \item $(A \to B) \to (A \to A)$
- \item $(A \to A) \to (A \to A)$
- \item $(\neg A \to A) \to A$
- \item $A \to (B \to ((C \to A) \to B))$
- \item $A \to A$
- \item $(A \to A) \to (B \to (A \to A))$ 
- \item $A \to (B \to (C \to A))$
+ \item $\vdash A \to (B \to A)$
+ \item $\vdash C \to (D \to C)$
+ \item $\vdash B \to ((A \to B) \to B)$ 
+ \item $\vdash B \to (A \to (B \to A))$
+ \item \hlight{$\vdash B \to (B \to (A \to B))$}
+ \item $\vdash (A \to B) \to (A \to A)$
+ \item \hlight{$\vdash (A \to A) \to (A \to A)$}
+ \item $\vdash (\neg A \to A) \to A$
+ \item $\vdash A \to (B \to ((C \to A) \to B))$
+ \item $\vdash A \to A$
+ \item $\vdash (A \to A) \to (B \to (A \to A))$ 
+ \item $\vdash F \to ((H \to F) \to (G \to G))$
+ \item \hlight{$\vdash F \to ((G \to G) \to (H \to F))$}
+\end{enumerate}
+
+\vfill\columnbreak %to delete
+
+\z Построить вывод используя гипотезы:
+\begin{enumerate}
+ \item $A, A \to B \vdash B$
+ \item $A, B \vdash C \to A$
+ \item $A \vdash B \to A$
+ \item $B \vdash C \to (A \to B)$
+ \item $B, B \to C \vdash D \to C$
+ \item $A \to (A \to C) \vdash A \to C$
+ \item $A \to (B \to C), B \vdash A \to C$
+ \item \hlight{$A \to (B \to C), A \to B, A \vdash C$}
+ \item $\neg B \to A, \neg A \vdash B$
+ \item \hlight{$\neg B \to \neg A, A \vdash B$}
+ \item $A \to B, B \to C \vdash A \to C$
+ \item $A \to (B \to C), B \vdash A \to C$
+ \item $\neg B \to A \vdash (\neg B \to \neg A) \to B$
+ \item $\vdash A \to (B \to (C \to A))$
+ \item $F, G, F \to (G \to H) \vdash H$
+ \item \hlight{$A, \neg A \vdash B$}
+
 \end{enumerate}
 
 \end{multicols}
