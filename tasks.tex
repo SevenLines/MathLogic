@@ -365,8 +365,6 @@ $abc$ -- некоторое слово из трех букв
  \item \hlight{$\vdash F \to ((G \to G) \to (H \to F))$}
 \end{enumerate}
 
-\vfill\columnbreak %to delete
-
 \z Построить вывод используя гипотезы:
 \begin{enumerate}
  \item $A, A \to B \vdash B$
@@ -388,6 +386,80 @@ $abc$ -- некоторое слово из трех букв
 
 \end{enumerate}
 
+\z Построить вывод используя теорему дедукции:
+\begin{enumerate}
+ \item $F \to ((F \to G) \to G)$
+ \item $(F \to G) \to ((H \to F) \to (H \to G)$
+ \item $(F \to (F \to G)) \to (F \to G)$
+ \item $(F \to G) \to ((F \to (G \to H)) \to (F \to H)$
+ \item $\neg \neg L \to L$
+ \item $U \to \neg \neg U$ 
+ \item $(\neg B \to \neg A) \vdash (A \to B)$
+ \item $(\neg B \to A) \vdash (\neg A \to B)$
+ \item $(B \to \neg A) \vdash (A \to \neg B)$
+ \item $(B \to A) \vdash (\neg A \to \neg B)$
+ \item $ A \to B, \neg A \to B \vdash B$  
+ \item $ E \to D, E \to \neg D \vdash E$   
+\end{enumerate}
+
+\end{multicols}
+
+\chapter{Теория алгоритмов}
+\section{Машина Тьюринга}
+
+\begin{multicols}{2}
+
+\z Построить машины тьюринга:
+\begin{enumerate}
+
+\item Добавление единицы справа
+\item \hlight{Удаление единицы слева}
+\item Заменяющая все единицы на нули
+\item Заменяющая все нули на пустые символы
+\item Сложение единиц
+\item Увеличение целого числа на единицу
+\item Вычитание единицы из целого числа
+\item Подсчет единиц (дешифратор)
+\item Выбор наибольшой последовательности из единиц
+\item \hlight{Выбор наименьшей последовательности из единиц}
+\item Вычитание единиц
+\item \hlight{Умножение единиц}
+\item Десятичное число в единицы (шифратор)
+\item Удвоение единиц
+\item Перестановка последовательностей из единиц
+
+\end{enumerate}
+
+\end{multicols}
+
+\section{Конечный Автомат}
+
+\begin{multicols}{2}
+\z Построить конечный автомат
+\begin{enumerate}
+\item Распознающий строку не содержащую единиц
+\item Распознающий числа заданные в двоичной системе счисления делящиеся на 4
+\item Распознающий числа заданные в двоичной системе счисления делящиеся на 16
+\item Распознающий числа заданные в единичной системе счисления делящиеся на 2
+\item Распознающие числа с плавающей запятой
+\item Распознающий предложения содержащие четное кол-во слов
+\item Распознающий адреса e-mail 
+\item Распознающий ip-адреса
+\end{enumerate}
+
+
+\z Построить МНР машину
+\begin{enumerate}
+\item Перестановка регистров
+\item Сложение положительных чисел
+\item Остаток от деления
+\item Целочисленное деления
+\item Умножение чисел
+\item Вычитание положительных чисел
+\end{enumerate}
+
 \end{multicols}
 
 \end{document}
+
+
