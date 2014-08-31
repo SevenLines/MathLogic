@@ -1,0 +1,176 @@
+\documentclass[a4paper,10pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2C]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{fontenc}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{mathtext}
+\usepackage{verbatim}
+\usepackage[usenames,dvipsnames]{color}
+
+\definecolor{light-gray}{gray}{0.95}
+
+\newcommand{\hlight}[1]{\colorbox{light-gray}{#1}}
+
+\newcounter{itemTask}
+\newcommand{\itemT}{\par\addtocounter{itemTask}{1}%
+\item}
+
+\righthyphenmin=2
+\oddsidemargin=0pt
+\textwidth=140mm
+
+\newcounter{task}[chapter]
+\newcommand{\z}{\par\addtocounter{task}{1}%
+ \noindent\textbf{Задача \arabic{task}. }}
+
+\begin{document}
+
+\begin{multicols}{2}
+
+\z Доказать что следующие формы эквивалентны:
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}}
+ \itemT $A \wedge B$ и $\neg(\bar{A} \vee \bar{B})$
+ \itemT $(A \vee B) \wedge C $ и $ (A \wedge C) \vee (B \wedge C) $
+\end{enumerate}
+
+\z Выразить через
+ \begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+  \itemT $\downarrow$ связки $\wedge, \to, \neg$
+  \itemT $|$ связки $\wedge, \to, \neg$
+ \end{enumerate}
+
+\z Построить КНФ, ДНФ, СКНФ и СДНФ:
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+  \itemT $ X \to ( Y \to Z )$
+  \itemT $( X \to  Y) \to Z $
+\end{enumerate}
+
+\z Доказать эквивалентность:
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+\itemT $(X \cup Y) \setminus Z$ и $(X \setminus Z) \cup (Y \setminus Z)$
+\itemT $A \cap  (B \setminus C)$ и $ (A \cap B) \setminus (A \cap C)$ и $(A 
+ \cap B) \setminus C$
+\end{enumerate}
+
+\z Построить бинарные отношения <<$>$>>, <<$<$>> и <<$=$>> заданные на:
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+ \itemT на множестве $X = \{5, 6, 7, 8 \}$
+ \itemT на декартовом произведении $X \times Y $, где $X = \{1, 2, 3, 4 \}$, а 
+$Y = \{5,6,7\}$
+ \itemT на декартовом произведении $X \times Y $, где $X = \{b, a, c \}$, а $Y = 
+\{c,y,z\}$
+\end{enumerate}
+
+\z Построить произведение отношений заданных на множестве $X=\{1,2,3,4\}$:
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+ \itemT $<$ и $>$ 
+ \itemT $>$ и $>$
+\end{enumerate}
+
+\z Доказать следующие утверждения ($\alpha,\beta,\gamma$ -- отношения):
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+ \itemT $\alpha(\beta \cup \gamma) = \alpha\beta \cup \alpha\gamma$
+ \itemT $(\beta \cup \gamma)\alpha = \beta\alpha \cup \gamma\alpha$
+\end{enumerate}
+
+\z Построить отношение $<^{100}$ на множестве $A = \{1,2, .. 103\}$
+
+\columnbreak
+\vfill
+
+\z Построить фактор множество множества $A$ по отношению $\alpha$
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+ \itemT $A = \{4,7,23,56,31,45\}$, $\alpha \sim mod3$
+ \itemT $A = \{0, \frac{\pi}{2},\frac{3\pi}{2},\pi,\frac{5\pi}{2}\}$, $a\alpha b \leftrightarrow sin(a) = sin(b)$ 
+\end{enumerate}
+
+
+\z Привести к предваренное нормальной форме методом упрощенной индукции, если $A$ не содержит свободных вхождений переменной $x$
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+ \itemT $\forall xB(x) \vee A $  
+ \itemT $\exists xB(x) \wedge A$
+ \itemT $A \to \exists xB(x)$
+ \itemT $\forall xB(x) \to A$
+\end{enumerate}
+
+%\end{multicols}
+
+
+
+\z Привести к предваренное нормальной форме
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+ \itemT $\forall xQ(x,y) \vee (\exists x Q(x,x) \to \forall z(R(t,z) \to \exists xQ(x,x) )$
+ \itemT $(P(y) \wedge Q(x)) \to \neg \forall yR(y,z)$
+ \itemT $\forall x (A(x) \to  \forall y(A(x,y)\to \neg\forall zA(y,z)))$
+\end{enumerate}
+
+%\begin{multicols}{2}
+
+\z Используя формулы исчисления предикатов построить следующие высказывания
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+ \itemT Существует ровно один элемент x такой что P(x)
+ \itemT Существует не более одного элемента x такого что P(x) 
+ \itemT Существует не более двух элементов x таких что P(x) 
+\end{enumerate}
+
+\columnbreak
+\vfill
+
+\z Построить вывод 
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+ \itemT $\vdash B \to (B \to (A \to B))$
+ \itemT $\vdash (A \to A) \to (A \to A)$
+ \itemT $\vdash F \to ((G \to G) \to (H \to F))$
+ \itemT $A \to (B \to C), A \to B, A \vdash C$
+ \itemT $\neg B \to \neg A, A \vdash B$
+ \itemT $A, \neg A \vdash B$
+ \itemT $(\neg B \to \neg A) \vdash (A \to B)$
+ \itemT $(\neg B \to A) \vdash (\neg A \to B)$
+ \itemT $(B \to \neg A) \vdash (A \to \neg B)$
+ \itemT $(B \to A) \vdash (\neg A \to \neg B)$
+ \itemT $ A \to B, \neg A \to B \vdash B$  
+ \itemT $ E \to D, E \to \neg D \vdash E$    
+\end{enumerate}
+
+
+\z Построить машины тьюринга:
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+\itemT Удаление единицы слева
+\itemT Вычитание единицы из целого числа
+\itemT Вычитание единиц
+\itemT Удвоение единиц
+\end{enumerate}
+
+\z Построить конечный автомат
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+\itemT Распознающий числа, заданные в двоичной системе счисления, делящиеся на 16
+\itemT Распознающий ip-адреса
+\end{enumerate}
+
+\z Построить МНР машину
+\begin{enumerate}
+\setcounter{enumi}{\arabic{itemTask}} 
+\itemT Вычитание положительных чисел
+\itemT Целочисленное деление
+\end{enumerate}
+
+\end{multicols}
+
+\end{document}
