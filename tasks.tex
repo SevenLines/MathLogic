@@ -64,22 +64,6 @@
 
 \begin{multicols}{2}
 
-\z Доказать что следующие формы эквивалентны:
-\begin{enumerate}
- \item $A \vee B$ и $\neg(\bar{A} \wedge \bar{B})$
- \item $A \wedge B$ и $\neg(\bar{A} \vee \bar{B})$
- \item $(A \wedge B) \vee C $ и $ (A \vee C) \wedge (B \vee C) $
- \item $(A \vee B) \wedge C $ и $ (A \wedge C) \vee (B \wedge C) $
-\end{enumerate}
-
- 
-  \z Расставить скобки и построить таблицу истинности для форм:
- \begin{enumerate}
-  \item $\neg A \to A \wedge B$
-  \item $ A \vee \neg B \to C \equiv A $
-  \item $A \vee B \wedge C \to D$
- \end{enumerate}
- 
 \z Сформулируйте и запишите в виде конъюнкции или дизъюнкции условие истинности каждого предложения (а,b -- действительные числа)
 \begin{enumerate}
 	\item $a \cdot b \neq 0$
@@ -90,7 +74,7 @@
 	\item $ab \leq 0$
 \end{enumerate}
 
-\z Пусть A = <<Это число целое>>, B = <<Это число положительное>>, С = <<Это число простое>>, D = <<Это число делится на 3>>. Запишите высказывания на естественном языке и подберите числа
+\z Пусть A = <<Это число целое>>, B = <<Это число положительное>>, С = <<Это число простое>>, D = <<Это число делится на 3>>. Запишите высказывания на естественном языке и подберите два числа удовлетворяющих данному высказыванию
  \begin{enumerate}
  \item $(A \vee B) \wedge (C \vee D)$
  \item $\neg A \vee \neg D$
@@ -98,18 +82,97 @@
  \item $(A\wedge C) \vee (B \wedge D)$
  \end{enumerate}
 
-\z Определить, является ли каждая из следующих форм тавтологией, противоречием 
-или
-ни тем и ни другим:
+\z По заданному числу постройте формулу содержащую не менее трех высказываний, одно отрицание конъюнкцию и дизъюнкцию
+
+\z Из трех данных высказываний А, В, С постройте такое составное высказывание, которое:
  \begin{enumerate}
-  \item  $A\equiv(A \vee A)$
-  \item $ (A\to B) \to ((B \to C) \to (A \to C))$
-  \item $((A \to B) \wedge B) \to A $
-  
-  \item $A \wedge (\neg (A \vee B ))$
-  \item $(A \to B) \equiv ( \neg A \vee B)$
-  \item $(A \to B) \equiv \neg (A \wedge \neg B)$
+	\item истинно тогда и только тогда, когда все данные высказывания истинны;
+	\item истинно тогда и только тогда, когда истинны высказывания $A$ и $B$;
+	\item ложно тогда и только тогда, когда все данные высказывания либо истинны, либо ложны;
+	\item ложно тогда и только тогда, когда ложно лишь высказывание $C$.
  \end{enumerate}
+\end{multicols}
+
+\pagebreak
+  
+\z Определите логическое значение последнего высказывания, исходя из логических значений всех предыдущих высказываний:
+ \begin{enumerate}
+ \item $\lambda(A \to B)=1,\; \lambda(A\leftrightarrow B) = 0,\; \lambda(B\to A)=?$
+ \item $\lambda(A \to B)=1,\; \lambda((\neg A \wedge B) \to (\neg A \vee B)=?$
+ \item $\lambda(A \to B) = 0,\; \lambda(\neg B \to A)=?$
+ \item $\lambda(A \wedge B)=0,\; \lambda(A \to B)= 1,\; \lambda(B \to \neg A)=?$
+ \item $\lambda(A \vee B)=1,\; \lambda(A\to B)=1,\; \lambda(\neg B \to A)=?$
+ \item $\lambda((A \vee B)\to A)=1,\; \lambda(A\to B)=1,\; \lambda(\neg A \leftrightarrow \neg B)=?$
+ \item $\lambda(A \leftrightarrow B)=1,\; \lambda((A\to B)\wedge(\neg A \to \neg B)=?$
+ \end{enumerate}
+ 
+\z Для каждого из помещенных ниже высказываний определите, достаточно ли приведенных сведений, чтобы установить его логическое значение (если достаточно, то укажите это значение, если недостаточно то покажите на примерах, что возможны и одно и другое истинностные значение)
+\begin{enumerate}
+\item $A \wedge (B \to C),\; \lambda(B \to C)=0$
+\item $A \wedge (B \to C),\; \lambda(B)=0$
+\item $\neg(A\wedge B) \leftrightarrow (\neg B \wedge \neg A),\; \lambda(A)=1$
+\item $(A\to B) \to (\neg A \to \neg B), \lambda(B)=1$
+\item $(A\wedge B) \to (A \vee C), \lambda(A)=0$
+\item $\neg(B \to A) \leftrightarrow \neg(A \vee C), \lambda(A)=1$
+\item $(A \leftrightarrow B) \vee (A \wedge C), \lambda(A)=0$
+\item $(\neg(A\to B)\to(A \wedge \neg B))\vee C, \lambda(A\to B)=0$
+\item $(A\wedge \neg C)\leftrightarrow((A\vee\neg C)\to(B \wedge D)), \lambda(A\wedge B)=0$
+\item $(A \wedge B) \to ((\neg A \leftrightarrow C)\wedge(B \vee C)), \lambda(A\wedge B)=1$
+\end{enumerate}
+
+\begin{multicols}{2}
+ 
+\z Докажите что следующие формулы выполнимы, не составляя для них таблиц истинности.
+\begin{enumerate}
+\item $\neg(P \to \neg P)$
+\item $(P \to Q) \to (Q \to P)$
+\item $(Q \to (P \wedge R)) \wedge \neg((P \vee R) \to Q)$
+\item $\neg(P\leftrightarrow \neg Q) \vee R) \wedge Q$
+\item $(((P \to Q) \to (R \to Q)) \to (R \to P)) \to (P \to Q)$
+\item $((Q \to \neg P) \to P) \to (P \to (\neg P \to Q))$
+\item $(P \to ((Q \to R) \to R)) \to ((P \to (Q \to R)) \to (P \to R))$
+\end{enumerate}
+ 
+ 
+\z Определить, является ли каждая из следующих форм тавтологией, противоречием или ни тем и ни другим:
+  \begin{enumerate}
+   \item $(P \to Q) \to ((P \to \neg Q)\to \neg P)$
+   \item $((P \to Q) \to P) \to Q$
+   \item $(P \wedge (Q \vee \neg P)) \wedge ((\neg Q \to P) \vee Q)$
+   \item $((P\wedge \neg Q) \to Q) \to (P \to Q)$
+   \item  $A\equiv(A \vee A)$
+   \item $ (A\to B) \to ((B \to C) \to (A \to C))$
+   \item $((A \to B) \wedge B) \to A $
+   \item $A \wedge (\neg (A \vee B ))$
+   \item $(A \to B) \equiv ( \neg A \vee B)$
+   \item $(A \to B) \equiv \neg (A \wedge \neg B)$
+  \end{enumerate}
+ 
+\z Доказать что следующие формы эквивалентны и построить соответствующие тавтологии
+\begin{enumerate}
+ \item $A \vee B$ и $\neg(\bar{A} \wedge \bar{B})$
+ \item $A \wedge B$ и $\neg(\bar{A} \vee \bar{B})$
+ \item $(A \wedge B) \vee C $ и $ (A \vee C) \wedge (B \vee C) $
+ \item $(A \vee B) \wedge C $ и $ (A \wedge C) \vee (B \wedge C) $
+\end{enumerate}
+ 
+\z Докажите что если:
+\begin{enumerate}
+\item $F \wedge G, F\leftrightarrow G$, то $G\to H$
+\item $F \vee G, G\to H$, то $F\vee H$
+\item $\neg F \to G, \neg G \wedge \neg H$, то $H\to F$
+\item $\neg G \wedge \neg H, F \vee G$, то $\neg F \to H$
+\item $F \vee G, F\leftrightarrow G$, то $G$
+\item $F, F \leftrightarrow G, F \leftrightarrow H$, то $G\wedge H$
+\item $\neg F \to G, \neg G \wedge \neg H$, то $F \vee H$
+\item $F \leftrightarrow G, G \leftrightarrow H$, то $F \leftrightarrow H$
+\end{enumerate}
+
+\z Докажите методом от противного
+\begin{enumerate}
+%\item 
+%todo добавить задание 1.40 из игошина
+\end{enumerate}
  
 \z Выразить через
  \begin{enumerate}
@@ -119,13 +182,15 @@
   \item $\downarrow$ связки $\wedge, \to, \neg$
   \item $|$ связки $\wedge, \to, \neg$
  \end{enumerate}
- \z Построить КНФ, ДНФ, СКНФ и СДНФ:
+ 
+\z Построить КНФ, ДНФ, СКНФ и СДНФ:
  \begin{enumerate}
   \item $ X \to ( Y \to Z )$
   \item $\neg(X \vee Z) \wedge (X \to Y)$
   \item $( X \to  Y) \to Z $
   \item $(X \equiv Y) \wedge \neg (Z \to T)$
  \end{enumerate}
+ 
 
 
 
