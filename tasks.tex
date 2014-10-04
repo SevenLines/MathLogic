@@ -120,7 +120,7 @@
 \item $(A \wedge B) \to ((\neg A \leftrightarrow C)\wedge(B \vee C)), \lambda(A\wedge B)=1$
 \end{enumerate}
 
-\begin{multicols}{2}
+
  
 \z Докажите что следующие формулы выполнимы, не составляя для них таблиц истинности.
 \begin{enumerate}
@@ -147,6 +147,8 @@
    \item $(A \to B) \equiv ( \neg A \vee B)$
    \item $(A \to B) \equiv \neg (A \wedge \neg B)$
   \end{enumerate}
+  
+  \begin{multicols}{2}
  
 \z Доказать что следующие формы эквивалентны и построить соответствующие тавтологии
 \begin{enumerate}
@@ -170,8 +172,8 @@
 
 \z Докажите методом от противного
 \begin{enumerate}
-%\item 
-%todo добавить задание 1.40 из игошина
+\item $F\to G, K \to L, F \vee K \models G \vee L$
+\item $F \to G, ((F\vee L) \wedge H) \to M, L \to H \models ((F \vee L) \wedge G) \to \neg M$
 \end{enumerate}
  
 \z Выразить через
@@ -215,22 +217,44 @@
  \item $A \cap  (B \setminus C)$ и $ (A \cap B) \setminus (A \cap C)$ и $(A 
 \cap B) \setminus C$
  \end{enumerate}
+\end{multicols}
+
 
 \section{Общие понятия об отношениях}
+\z Доказать, и построить представление на графике
+\begin{enumerate}
+\item $(A\cap B) \times (C\cap D) = (A \times C)\cap(B\times D)$
+\item $(A\cup B)\times C = (A\times C)\cup(B\times C)$
+\item $A \times (B\cup C) = (A\times B)\cup(A \times C)$
+\item $(A\cup B)\times (C\cup D) = (A\times C)\cup(B\times C)\cup (A\times D)\cup (B\times D)$
+\item $(A\setminus B)\times C = (A \times C)\setminus(B\times C)$
+\item $A\times(B\setminus C) = (A\times B)\setminus (A\times C)$
+\item $A\times B = (A\times D)\cap(C\times B)$, где $A\subseteq C$ и $B\subseteq D$
+\item $U^2\setminus(A\times B) = [(U\setminus A)\times U]\cup[U \times(U\setminus B)]$
+\end{enumerate}
+
+
 \z Построить декартово произведение:
  \begin{enumerate}
   \item $X \times X $, где $X = \{1, 2, 3, 4 \}$
-  \item $X \times Y $, где $X = \{1, 2, 3, 4 \}$, а $Y = \{5,6,7\}$
-  \item $X \times Y $, где $X = \{b, a, c \}$, а $Y = \{x,y,z\}$
+  \item $X \times X $, где $X = \{5, 1, 9, 0 \}$  
+  \item $X \times Y $, где $X = \{1, 2, 3 \}$, а $Y = \{5,6,7\}$
+  \item $X \times Y $, где $X = \{1, 2, 3\}$, а $Y = \{2,3,4\}$  
+  \item $X \times Y $, где $X = \{1, 2, 3 \}$, а $Y = \{x,y,z\}$
+  \item $X \times X \times X $, где $X = \{1, 2 \}$   
+  \item $X \times X \times Z $, где $X = \{a, b \}$, а $Z = \{1, 2\}$
  \end{enumerate}
+ 
+
+\begin{multicols}{2}
  
 \z Построить бинарные отношения <<$>$>>, <<$<$>> и <<$=$>> заданные на:
 \begin{enumerate}
  \item на множестве $X = \{5, 6, 7, 8 \}$
  \item на декартовом произведении $X \times Y $, где $X = \{1, 2, 3, 4 \}$, а 
-$Y = \{5,6,7\}$
+$Y = \{3,4,5,6\}$
  \item на декартовом произведении $X \times Y $, где $X = \{b, a, c \}$, а $Y = 
-\{c,y,z\}$
+\{c,y,z\}$, в соответствии с лексикографическим порядком
 \end{enumerate}
 
 \z Построить тернарное отношение $\beta$ заданное на множества $S = 
@@ -239,10 +263,6 @@ $Y = \{5,6,7\}$
 \z Построить унарное отношение $\alpha$ (свойство) заданное на множестве $S~=~
 \{ \textrm{А ... Я} \}$ истинное для $x \in S$ тогда и только тогда когда $x$ 
 -- гласная.
-
-\z Построить тернарное отношение $w$ заданное на множестве $S~=~
-\{ \textrm{А ... Я} \}$ истинное для $a,b,c \in S$ тогда и только тогда когда 
-$abc$ -- некоторое слово из трех букв
 
 \begin{comment}
 \z Пусть $\alpha$, $\beta$ -- отношения. Доказать истинность следующих 
