@@ -1,0 +1,63 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[russian]{babel}
+
+\setlength{\parindent}{0pt}
+\begin{document}
+
+\section*{Схема базы данных}
+
+\section*{Проект базы данных}
+
+\textbf{Bands} (Музыкальные группы)
+\begin{enumerate}
+\item id -- уникальный идентификатор 
+\item title -- название группы
+\item genre\_id -- жанр в котором играет группа (ссылка на таблицу жанров)
+\end{enumerate}
+Таблица \textbf{Bands} образует отношение, которое является подмножеством декартова произведения
+$$I_{Bands} \times T \times I_{Genres}$$
+где $T$ есть множество всевозможных названий групп, $I_{Bands}, I_{Genres} \subseteq Z$
+
+\
+
+\textbf{Genres} (Музыкальные жанры)
+\begin{enumerate}
+\item id -- уникальный идентификатор жанра
+\item name -- название жанра
+\item year -- год основания жанра
+\end{enumerate}
+Таблица \textbf{Genres} образует отношение, которое является подмножеством декартова произведения
+$$I_{Genres} \times N \times Y$$
+где $N$ есть множество всевозможных названий жанров, $I_{Genres},Y \subseteq Z$ 
+
+\section*{Содержимое таблиц}
+\begin{tabular}{c|c|c}
+id & title & genre\_id \\ \hline
+1	& Beatles, The	& 1 \\ 
+2	& Nirvana	& 4 \\ 
+3	& Bjork	& 2 \\ 
+4	& Elvis Presley	& 1 \\ 
+5	& Alice in Chains	& 4 \\
+6	& Lana del Rey	& 2 \\ 
+7	& Little Richard	& 1 \\ 
+8	& Babes In Toyland	& 4 \\ 
+9	& Elisane	& 2 \\ 
+\end{tabular}
+
+
+\begin{tabular}{c|c|c}
+id & name & year \\ \hline
+1	& Rock-n-roll	& 1950\\
+2	& Trip hop	& 1990 \\
+4	& Grunge	& 1980 \\
+
+\end{tabular}
+
+\section*{Запросы}
+
+\end{document}

@@ -1,0 +1,9 @@
+1	Beatles, The	1
+2	Nirvana	4
+3	Bjork	2
+4	Elvis Presley	1
+5	Alice in Chains	4
+6	Lana del Rey	2
+7	Little Richard	1
+8	Babes In Toyland	4
+9	Elisane	2
