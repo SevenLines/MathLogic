@@ -1,4 +1,12 @@
 # coding=utf-8
+"""
+Задачи по темам:
+    теория множеств
+    отношения
+    предваренная нормальная форма
+    анализ рассуждений
+    формальный вывод
+"""
 import random
 import string
 
@@ -55,22 +63,22 @@ def gen_task2(s1, s2, s3, s4, s5):
 
 
 task1 = {
-    'description': r"Доказать, если $A\,\dot{-}\,B=(A\setminus B)\cup(B\setminus A)$: \\",
+    'description': r"Доказать:",
     'variants': [
-        r"$$A\,\dot{-}\,U=A'$$",
-        r"$$A\setminus B = A\,\dot{-}\,(A\cap B)$$",
+        r"$$B\,\dot{-}\,U=B'$$",
+        r"$$B\setminus A = B\,\dot{-}\,(B\cap A)$$",
         r"$$A\,\dot{-}\,\emptyset=A$$",
-        r"$$A\setminus B = A\,\dot{-}\,(A\cap B)$$",
+        r"$$A\setminus B = A\,\dot{-}\,(A\cap )$$",
     ]
 }
 
 task2 = {
     'description': r"Построить отношение $(\alpha\cdot\beta\cup\beta\cdot\alpha)\setminus\gamma$",
     'variants': [
-        gen_task2("su", "nd", "ay", "wi", "ne"),
-        gen_task2("ge", "ni", "us", "ma", "ny"),
-        gen_task2("mo", "nd", "ay", "li", "ne"),
-        gen_task2("si", "ng", "le", "ra", "nk"),
+        gen_task2("mo", "nd", "ay", "wi", "ne"),
+        gen_task2("op", "ti", "cs", "ka", "ty"),
+        gen_task2("gl", "om", "iy", "et", "on"),
+        gen_task2("do", "ng", "le", "bu", "nt"),
     ]
 }
 
@@ -83,19 +91,32 @@ task3 = {
 
 # проверить утверждение
 task4 = {
-    'description': "Проанализируйте рассуждение: \\",
+    'description': "Проанализируйте рассуждение:",
     'variants': [
-        "Все хирурги -- врачи. Некоторые врачи -- герои России. "
-        "Следовательно, некоторые хирурги -- Герои России",
 
-        "Всякий метал является твердым веществом. Ртуть не твердое вещество. "
-        "Следовательно, ртуть не металл.",
+        "Все бегуны -- спортсмены. Ни один спортсмен не курит. "
+        "Следовательно, ни один курящий не является бегуном",
+
+        "Некоторые змеи ядовиты. Ужи -- змеи. Следовательно, ужи -- ядовиты. ",
 
         "Все студенты ИГУ -- жители Иркутской области. Некоторые жители Иркутской области -- пенсионеры. "
         "Следовательно, некоторые студенты ИГУ -- пенсионеры",
 
-        "Все бегуны -- спортсмены. Ни один спортсмен не курит. "
-        "Следовательно, ни один курящий не является бегуном",
+        "Все сильные шахматисты знают теорию шахматной игры."
+        "Иванов -- так себе шахматист. Следовательно он не знает теорию шахматной игры.",
+
+        "Все хирурги -- врачи. Некоторые врачи -- герои России. "
+        "Следовательно, некоторые хирурги -- Герои России",
+    ]
+}
+
+task5 = {
+    'description': "Построить вывод",
+    'variants': [
+        r"$$K \to L \vdash \neg K \to \neg L$$",
+        r"$$K, \neg K \vdash \neg L$$",
+        r"$$M \to \neg T \vdash T \to \neg M$$",
+        r"$$A \to (B \to C) \vdash B \to (A \to C)$$",
     ]
 }
 
@@ -135,7 +156,11 @@ for (param, predicat) in zip(params, predicats):
     })
     task3['variants'].append(task)
 
-for i, t in enumerate(zip(task1['variants'], task2['variants'], task3['variants'], task4['variants']), 1):
+for i, t in enumerate(zip(task1['variants'],
+                          task2['variants'],
+                          task3['variants'],
+                          task4['variants'],
+                          task5['variants']), 1):
     print r"Вариант %s" % i
     print r"\begin{enumerate}"
     print r"\item %s" % task1['description']
@@ -146,6 +171,8 @@ for i, t in enumerate(zip(task1['variants'], task2['variants'], task3['variants'
     print t[2]
     print r"\item %s:\\" % task4['description']
     print t[3]
+    print r"\item %s:\\" % task5['description']
+    print t[4]
     print r"\end{enumerate}"
 
 
